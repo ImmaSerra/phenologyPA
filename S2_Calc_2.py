@@ -80,11 +80,17 @@ xmax=389259.48050923366
 ymax=5059673.797540059
 """
 
+xmin=coord[0],
+ymin=coord[1],
+xmax=coord[2],
+ymax=coord[3]
+
+""""
 xmin=429770,
 ymin=4666780,
 xmax=433953,
 ymax=4672292
-
+"""
 
 nir_da = nir_da_gran.rio.clip_box(
     minx=xmin,

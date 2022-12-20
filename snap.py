@@ -73,8 +73,14 @@ def main():
     dates =[ARG['data1'],ARG['data2']]
     print(dates[0])
     print(dates[1])
-    print(ARG['bbox'][0])
-    print(ARG['bbox'][1])
+    print(ARG['bbox'])
+
+    coord = ARG['bbox'].split(',')
+    print(coord[0])
+
+
+    #print(ARG['bbox'][0]) #Error 4 primer digit
+    #print(ARG['bbox'][1]) #Error 3 segon digit
 
     #api = SentinelAPI('iserra', 'Creaf-21', 'https://scihub.copernicus.eu/dhus')
     api = SentinelAPI(user, passw, 'https://scihub.copernicus.eu/dhus')
