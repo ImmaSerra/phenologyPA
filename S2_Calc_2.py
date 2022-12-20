@@ -81,10 +81,10 @@ xmax=389259.48050923366
 ymax=5059673.797540059
 """
 
-xmin=snap.coord[0],
-ymin=snap.coord[1],
-xmax=snap.coord[2],
-ymax=snap.coord[3]
+xmin=snap.bbox(coord[0])
+ymin=snap.bbox()
+xmax=snap.bbox(coord[2])
+ymax=snap.bbox(coord[3])
 
 """"
 xmin=429770,

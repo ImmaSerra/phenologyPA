@@ -78,7 +78,9 @@ def main():
     coord = ARG['bbox'].split(',')
     print(coord[0])
 
-
+    def bbox():
+        coord = ARG['bbox'].split(',')
+        return coord
     #print(ARG['bbox'][0]) #Error 4 primer digit
     #print(ARG['bbox'][1]) #Error 3 segon digit
 
