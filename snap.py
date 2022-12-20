@@ -73,7 +73,8 @@ def main():
     dates =[ARG['data1'],ARG['data2']]
     print(dates[0])
     print(dates[1])
-    print(ARG['bbox_l'])
+    print(ARG['bbox'][0])
+    print(ARG['bbox'][1])
 
     #api = SentinelAPI('iserra', 'Creaf-21', 'https://scihub.copernicus.eu/dhus')
     api = SentinelAPI(user, passw, 'https://scihub.copernicus.eu/dhus')
