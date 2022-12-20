@@ -18,6 +18,7 @@ import snappy_func as dp
 import dask
 import datetime as dt
 from datetime import date
+import snap
 
 import matplotlib.pyplot as plt
 #%matplotlib inline
