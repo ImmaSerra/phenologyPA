@@ -1,0 +1,24 @@
+{
+  "scripts": [
+    {
+      "repoPath": "run.sh",
+      "targetPath": "run.sh",
+      "pathType": "FILE"
+ },
+ {
+   "repoPath": "snap.py",
+   "targetPath": "snap.py",
+   "pathType": "FILE"
+ },
+ {
+   "repoPath": "S2_Calc_2.py",
+   "targetPath": "S2_Calc_2.py",
+   "pathType": "FILE"
+ },
+ {
+   "repoPath": "snappy_func.py",
+   "targetPath": "snappy_func.py",
+   "pathType": "FILE"
+ }
+  ]
+}

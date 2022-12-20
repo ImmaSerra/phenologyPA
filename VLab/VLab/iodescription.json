@@ -1,0 +1,69 @@
+{
+  "inputs": [
+    {
+      "id": "DataObject_01",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "Sentinel 2A scene",
+      "name": "Sentinel 2A scene",
+      "obligation": false,
+      "hasDefault": false,
+      "valueSchema": "sat_product",
+      "target": "data/sat_product"
+     },
+     {
+       "id": "DataObject_00",
+       "inputType": "array",
+       "valueType": "value",
+       "description": "Sentinel 2A scenes",
+       "name": "Sentinel 2A scenes",
+       "obligation": false,
+       "hasDefault": false,
+       "valueSchema": "sat_product",
+       "target": "data/sat_product"
+      },
+     {
+       "id": "DataObject_02",
+       "inputType": "individual",
+       "valueType": "value",
+       "description": "URL to download the Sentinel 2A scene",
+       "name": "Sentinel 2A scene",
+       "obligation": false,
+       "hasDefault": false,
+       "valueSchema": "url",
+       "target": "data/img.zip"
+    },
+    {
+        "id": "bbox",
+        "inputType": "individual",
+        "valueType": "value",
+        "description": "Bounding Box (numbers separated by commas: west,south,east,north)",
+        "name": "Bounding Box ",
+        "obligation": false,
+        "hasDefault": true,
+        "defaultValue": false,
+        "valueSchema": "bbox",
+        "target": "bbox_l"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ndvi.tif",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output NDVI image in TIFF format",
+      "name": "Output image in TIFF format",
+      "valueSchema": "url",
+      "target": "ndvi_output.tif"
+    },
+    {
+      "id": "graph01",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Plot - NDVI time-series png",
+      "name": "Plot - NDVI time-series png",
+      "valueSchema": "url",
+      "target": "graph.png"
+    }
+  ]
+}

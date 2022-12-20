@@ -1,0 +1,14 @@
+{
+  "scripts": [
+    {
+      "repoPath": "run.sh",
+      "targetPath": "run.sh",
+      "pathType": "FILE"
+ },
+ {
+   "repoPath": "S2_calc.py",
+   "targetPath": "S2_calc.py",
+   "pathType": "FILE"
+ }
+  ]
+}

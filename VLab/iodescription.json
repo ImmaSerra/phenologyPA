@@ -1,0 +1,154 @@
+{
+  "inputs": [
+    {
+      "id": "user",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "user",
+      "name": "user",
+      "obligation": true,
+      "hasDefault": false,
+      "valueSchema": "string_parameter",
+      "target": "user"
+   },
+    {
+      "id": "passw",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "password",
+      "name": "Pass",
+      "obligation": true,
+      "hasDefault": false,
+      "valueSchema": "string_parameter",
+      "target": "passw"
+   },
+    {
+      "id": "data1",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "Sensing Start Time",
+      "name": "Data start",
+      "obligation": true,
+      "hasDefault": false,
+      "valueSchema": "string_parameter",
+      "target": "start"
+   },
+    {
+      "id": "data2",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "Sensing Stop Time",
+      "name": "Data end",
+      "obligation": true,
+      "hasDefault": false,
+      "valueSchema": "string_parameter",
+      "target": "end"
+    },
+    {
+      "id": "Databbox",
+      "inputType": "individual",
+      "valueType": "value",
+      "description": "URL to geojson",
+      "name": "BBox",
+      "obligation": false,
+      "hasDefault": false,
+      "valueSchema": "url",
+      "target": "bboxgeo.json"
+    },
+    {
+        "id": "bbox",
+        "inputType": "individual",
+        "valueType": "value",
+        "description": "Bounding Box (numbers separated by commas: west,south,east,north)",
+        "name": "Bounding Box",
+        "obligation": false,
+        "hasDefault": true,
+        "defaultValue": false,
+        "valueSchema": "bbox",
+        "target": "bbox_l"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output.txt",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "The output file",
+      "name": "Output.txt",
+      "valueSchema": "url",
+      "target": "output/output.txt"
+    },
+    {
+      "id": "sos.tif",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output SOS DOY image in TIFF",
+      "name": "Output SOS DOY image in TIFF",
+      "valueSchema": "url",
+      "target": "output/sos.tif"
+    },
+    {
+      "id": "vos.tif",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output VSOS image in TIFF",
+      "name": "Output VSOS image in TIFF",
+      "valueSchema": "url",
+      "target": "output/vsos.tif"
+    },
+    {
+      "id": "pos.tif",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output POS DOY image in TIFF",
+      "name": "Output POS DOY image in TIFF",
+      "valueSchema": "url",
+      "target": "output/pos.tif"
+    },
+    {
+      "id": "vpos.tif",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output VPOS image in TIFF",
+      "name": "Output VPOS image in TIFF",
+      "valueSchema": "url",
+      "target": "output/vpos.tif"
+    },
+    {
+      "id": "eos.tif",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output EOS DOY image in TIFF",
+      "name": "Output EOS DOY image in TIFF",
+      "valueSchema": "url",
+      "target": "output/eos.tif"
+    },
+    {
+      "id": "veos.tif",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Output VEOS image in TIFF",
+      "name": "Output VEOS image in TIFF",
+      "valueSchema": "url",
+      "target": "output/veos.tif"
+    },
+    {
+      "id": "statsPheno.png",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Plot - phenology statistics png",
+      "name": "Plot - phenology statistics png",
+      "valueSchema": "url",
+      "target": "output/statsPheno.png"
+    },
+    {
+      "id": "graph.png",
+      "outputType": "individual",
+      "valueType": "value",
+      "description": "Plot - NDVI time-series png",
+      "name": "Plot - NDVI time-series png",
+      "valueSchema": "url",
+      "target": "output/graph.png"
+    }
+  ]
+}
