@@ -18,7 +18,7 @@ import snappy_func as dp
 import dask
 import datetime as dt
 from datetime import date
-import snap
+import snap as dti
 
 import matplotlib.pyplot as plt
 #%matplotlib inline
@@ -81,10 +81,10 @@ xmax=389259.48050923366
 ymax=5059673.797540059
 """
 
-xmin=snap.bbox(coord[0])
-ymin=snap.bbox()
-xmax=snap.bbox(coord[2])
-ymax=snap.bbox(coord[3])
+xmin= dti.bbox(coord[0])
+ymin= dti.bbox(coord[1])
+xmax= dti.bbox(coord[2])
+ymax= dti.bbox(coord[3])
 
 """"
 xmin=429770,
