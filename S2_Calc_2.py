@@ -85,10 +85,10 @@ ymax=5059673.797540059
 #AttributeError: module 'snap' has no attribute 'bbox'
 
 
-xmin= dti.main.bbox(coord[0])
-ymin= dti.main.bbox(coord[1])
-xmax= dti.main.bbox(coord[2])
-ymax= dti.main.bbox(coord[3])
+xmin= dti.bbox(coord[0])
+ymin= dti.bbox(coord[1])
+xmax= dti.bbox(coord[2])
+ymax= dti.bbox(coord[3])
 
 """"
 xmin=429770,
