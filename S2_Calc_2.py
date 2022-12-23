@@ -73,12 +73,7 @@ print(time_var)
 nir_da_gran = xr.concat([rioxarray.open_rasterio(i,chunks={'x': 2048, 'y': 2048}) for i in nirlist],dim=time_var)
 #nir_da_gran = xr.concat([rioxarray.open_rasterio(i) for i in nirlist],dim=time_varOrder)
 print(nir_da_gran)
-"""
-xmin=348876.40778550116
-ymin=5029144.969318298
-xmax=389259.48050923366
-ymax=5059673.797540059
-"""
+
 #File "S2_Calc_2.py", line 84, in <module>
 #xmin= dti.bbox(coord[0])
 #AttributeError: module 'snap' has no attribute 'bbox'
@@ -88,21 +83,9 @@ ymin = int(dti.env_coord[1])
 xmax = int(dti.env_coord[2])
 ymax = int(dti.env_coord[3])
 
-"""
-xmin= dti.bbox()[0]
-ymin= dti.bbox()[1]
-xmax= dti.bbox()[2]
-ymax= dti.bbox()[3]
-"""
 print('coord')
 print(xmin,ymin,xmax,ymax)
 
-""""
-xmin=429770,
-ymin=4666780,
-xmax=433953,
-ymax=4672292
-"""
 
 nir_da = nir_da_gran.rio.clip_box(
     minx=xmin,
