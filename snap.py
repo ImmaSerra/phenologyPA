@@ -27,9 +27,6 @@ import json
 
 #fileTemporal = sys.argv[2]   #txt file
 
-def bbox():
-    coord = ARG['bbox'].split(',')
-    return coord
 
 def main():
 
@@ -82,7 +79,14 @@ def main():
     coord = ARG['bbox'].split(',')
     print(coord[0])
 
+    env_coord = coord
+    """
+    def bbox():
+        coord = ARG['bbox'].split(',')
+        return coord
+
     env_coord = bbox()
+    """
 
     #print(ARG['bbox'][0]) #Error 4 primer digit
     #print(ARG['bbox'][1]) #Error 3 segon digit
