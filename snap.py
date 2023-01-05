@@ -27,6 +27,10 @@ import json
 
 #fileTemporal = sys.argv[2]   #txt file
 
+def bbox():
+    coord = ARG['bbox'].split(',')
+    return coord
+
 def main():
 
     ARG=json.load(open("vlabparams.json","r"))
@@ -78,12 +82,8 @@ def main():
     coord = ARG['bbox'].split(',')
     print(coord[0])
 
-    def bbox():
-        coord = ARG['bbox'].split(',')
-        return coord
-
     env_coord = bbox()
-    env_coord
+
     #print(ARG['bbox'][0]) #Error 4 primer digit
     #print(ARG['bbox'][1]) #Error 3 segon digit
 
@@ -104,7 +104,6 @@ def main():
                          processinglevel = 'Level-2A',
                          cloudcoverpercentage = (0, 80))  #80%
 
-
     print('files:',len(products))
 
     if not os.path.exists('output'):
@@ -123,7 +122,6 @@ def main():
         #outputfile.write(str(api.get_product_odata(i)['title'])+'\n')
         f.write(str(api.get_product_odata(i)['title'])+'\n')
     f.close()
-
 
     # convert to Pandas DataFrame
     products_df = api.to_dataframe(products)
@@ -173,4 +171,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    #bbox()
