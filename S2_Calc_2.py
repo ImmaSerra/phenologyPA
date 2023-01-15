@@ -13,7 +13,7 @@ import geojson
 import json
 import pyproj
 #import snap.__main__ as dti
-import snap.main as dti
+import snap as dti
 #import snappy_S2 as snp
 import snappy_func as dp
 #files = dp2.queryS2('product_list_2019.txt')
