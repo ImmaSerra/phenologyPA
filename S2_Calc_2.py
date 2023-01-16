@@ -87,6 +87,8 @@ ymax = int(dti.env_coord[3])
 print('coord')
 print(xmin,ymin,xmax,ymax)
 
+crs= 'epsg:32633'
+nir_da_gran.rio.set_crs(crs)
 
 nir_da = nir_da_gran.rio.clip_box(
     minx=xmin,
@@ -96,9 +98,9 @@ nir_da = nir_da_gran.rio.clip_box(
     #crs='32633'
 )
 #nir_da
-nir_da = nir_da.set_crs(32633)
+#nir_da = nir_da.set_crs(32633)
 
-print(nir_da.rio.crs)
+print('crs', nir_da.rio.crs)
 
 nir_ds = nir_da.to_dataset('band')
 nir_ds = nir_ds.rename({1: 'nir'})
@@ -106,6 +108,7 @@ nir_ds = nir_ds.rename({1: 'nir'})
 print('nir',nir_ds.values)
 print('nirvalue',nir_ds['nir'].values[0,0,0])
 print(nir_ds.x)
+
 
 
 red_da_gran = xr.concat([rioxarray.open_rasterio(i,chunks={'x': 2048, 'y': 2048}) for i in redlist],    #
@@ -121,8 +124,9 @@ red_da = red_da_gran.rio.clip_box(
     #crs='32633'
 )
 
-red_da = red_da.set_crs(32633)
-print(red_da.rio.crs)
+
+#red_da = red_da.set_crs(32633)
+print('crs', red_da.rio.crs)
 
 red_ds = red_da.to_dataset('band')
 red_ds = red_ds.rename({1: 'red'})
