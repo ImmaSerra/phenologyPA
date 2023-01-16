@@ -93,9 +93,10 @@ nir_da = nir_da_gran.rio.clip_box(
     miny=ymin,
     maxx=xmax,
     maxy=ymax,
-    crs='32633'
+    #crs='32633'
 )
 #nir_da
+nir_da = nir_da.set_crs(32633)
 
 print(nir_da.rio.crs)
 
@@ -117,10 +118,10 @@ red_da = red_da_gran.rio.clip_box(
     miny=ymin,
     maxx=xmax,
     maxy=ymax,
-    crs='32633'
+    #crs='32633'
 )
 
-
+red_da = red_da.set_crs(32633)
 print(red_da.rio.crs)
 
 red_ds = red_da.to_dataset('band')
