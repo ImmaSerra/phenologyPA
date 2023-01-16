@@ -93,7 +93,7 @@ nir_da = nir_da_gran.rio.clip_box(
     miny=ymin,
     maxx=xmax,
     maxy=ymax,
-    crs='32635'
+    crs='32633'
 )
 #nir_da
 
@@ -117,7 +117,7 @@ red_da = red_da_gran.rio.clip_box(
     miny=ymin,
     maxx=xmax,
     maxy=ymax,
-    crs='32635'
+    crs='32633'
 )
 
 
